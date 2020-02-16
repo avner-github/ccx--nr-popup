@@ -5,4 +5,6 @@ This little python script is meant to remind not-ready agents to make themselves
 
 syntax is 'python ccx-nr-popup1.0.py X.X.X.X' where the last parameter is the CCX ip address
 
-any questions/concerns, comment
+any questions/concerns, comment or email aizhar@presidio.com
+
+
