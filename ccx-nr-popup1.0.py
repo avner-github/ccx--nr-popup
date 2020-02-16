@@ -1,8 +1,12 @@
-#from getpass import getpass
+# Contact Center Express not ready popup application for windows
+# Created by Avner Izhar, 2020
+# Licensed under GNU open source, for issues contact me at avner.izhar@gmail.com
+#
+#
+
 import requests
 import sys
 from requests.auth import HTTPBasicAuth
-#import xml.etree.ElementTree as ET
 import getpass
 import ctypes
 import time
