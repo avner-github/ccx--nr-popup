@@ -1,6 +1,6 @@
 # Contact Center Express not ready popup application for windows
 # Created by Avner Izhar, 2020
-# Licensed under GNU open source, for issues contact me at avner.izhar@gmail.com
+# Licensed under GNU open source, for issues contact me at aizhar@presidio.com
 #
 #
 
@@ -22,13 +22,10 @@ if __name__ == '__main__':
     pass01 = getpass.getpass('Please enter your finesse Password:')
     hostname1 = str(sys.argv[1])
     url = "https://"+ hostname1 +":8445/finesse/api/User/"+ usr01
-    #print (url)
     counter1 = 1
     while True:
         try:
             response = requests.get(url=url, auth=HTTPBasicAuth(usr01, pass01),verify=False)
-            #print (response)
-            #print (response.text)
             print (str(counter1) +' checking agent status ...')
             counter1 = counter1+1
             info2parse = response.text
@@ -38,8 +35,6 @@ if __name__ == '__main__':
                     time.sleep(2)
                     response = requests.get(url=url, auth=HTTPBasicAuth(usr01, pass01), verify=False)
                     info2parse = response.text
-                    #print (nrstart)
-                    #print (time.time() - nrstart)
                     if time.time() - nrstart > 30:
                         Mbox('Presidio Finnesse Not-Ready Alert',
                             'Agent is in not ready state !!!\n\nPlease change to ready or logout', 0x1000)
@@ -50,7 +45,6 @@ if __name__ == '__main__':
                 sys.exit()
 
             time.sleep(10)
-
 
         except:
            errorMsg = str(sys.exc_info())
